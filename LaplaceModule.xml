@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Matlab</category>
+  <title>LaplaceModule</title>
+  <description><![CDATA[FILL IN ALGO DESCRIPTION.]]></description>
+  <version>0.0.0.1</version>
+  <documentation-url>http://www.slicer.org/slicerWiki/index.php/Documentation/Nightly/Extensions/MatlabBridge</documentation-url>
+  <license/>
+  <contributor>ADD NAMES (Robarts Research Institute)</contributor>
+  <acknowledgements><![CDATA[ADD ACKNOWLEDGEMENTS.]]></acknowledgements>
+  <parameters>
+    <label>Label Maps</label>
+    <description><![CDATA[Input parameters for the label maps.]]></description>
+    <image>
+      <label>Input Label Map</label>
+      <description><![CDATA[Label map input.]]></description>
+      <longflag>inputmap</longflag>
+      <channel>input</channel>
+    </image>
+	<image>
+      <label>Output Laplace Field</label>
+      <description><![CDATA[Label map output.]]></description>
+      <longflag>outputmap</longflag>
+      <channel>output</channel>
+    </image>
+  </parameters>
+  <parameters>
+    <label>Labels</label>
+    <description><![CDATA[Parameters for the processing]]></description>
+    <integer>
+      <label>Foreground Label</label>
+      <description><![CDATA[Integer specifying foreground label.]]></description>
+      <longflag>fg</longflag>
+      <default>1</default>
+    </integer>
+	<integer>
+      <label>Source Label</label>
+      <description><![CDATA[Integer specifying source label.]]></description>
+      <longflag>source</longflag>
+      <default>2</default>   
+    </integer>
+	<integer>
+      <label>Sink Label</label>
+      <description><![CDATA[Integer specifying sink label.]]></description>
+      <longflag>sink</longflag>
+      <default>3</default>
+    </integer>
+	<integer>
+      <label>Max Iterations</label>
+      <description><![CDATA[Varies depending on distance between source and sink.]]></description>
+      <longflag>maxiters</longflag>
+      <default>500</default>
+      <constraints>
+        <minimum>50</minimum>
+        <maximum>5000</maximum>
+        <step>1</step>
+      </constraints>      
+    </integer>
+  </parameters>
+</executable>
